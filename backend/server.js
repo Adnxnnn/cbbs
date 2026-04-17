@@ -8,14 +8,9 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: [
-    process.env.FRONTEND_URL, 
-    "http://localhost:5173", 
-    "http://127.0.0.1:5173",
-    "https://cbbs-opal.vercel.app"
-  ].filter(Boolean),
-  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
-  allowedHeaders: ['Content-Type']
+  origin: '*',
+  methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
