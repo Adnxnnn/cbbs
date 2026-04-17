@@ -1,0 +1,15 @@
+{
+  "name": "cbbs-fullstack",
+  "version": "1.0.0",
+  "description": "College Bus Booking System",
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm start",
+    "build:frontend": "cd frontend && npm run build",
+    "start:prod": "cd backend && npm start"
+  },
+  "dependencies": {
+    "git": "^0.1.5"
+  }
+}
